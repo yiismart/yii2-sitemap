@@ -162,7 +162,7 @@ class SitemapBehavior extends Behavior
      */
     private function sitemapDelete()
     {
-        $model = Sitemap::findByOwner($this->owner, $this->key);
+        $model = Sitemap::findByOwner($this->owner);
 
         if ($model !== null) {
             $model->delete();
